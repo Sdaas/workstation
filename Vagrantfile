@@ -53,19 +53,21 @@ Vagrant.configure("2") do |config|
   # The script.sh file needs to be present in relative to Vagrantfile on the _host_ machine
   config.vm.provision :shell, :path => "script.sh"
 
-  # Enable provisioning with chef solo, specifying a cookbooks path, roles
+ # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
   #
-  # config.vm.provision :chef_solo do |chef|
-  #   chef.cookbooks_path = "../my-recipes/cookbooks"
-  #   chef.roles_path = "../my-recipes/roles"
-  #   chef.data_bags_path = "../my-recipes/data_bags"
-  #   chef.add_recipe "mysql"
-  #   chef.add_role "web"
+  # Also see http://docs.vagrantup.com/v2/provisioning/chef_solo.html
   #
-  #   # You may also specify custom JSON attributes:
-  #   chef.json = { :mysql_password => "foo" }
-  # end
+  config.vm.provision :chef_solo do |chef|
+     chef.cookbooks_path = "cookbooks"
+     chef.roles_path = "roles"
+     chef.data_bags_path = "data_bags"
+     chef.add_role "java"
+     chef.add_recipe "java"
+  
+    # You may also specify custom JSON attributes:
+     chef.json = { :mysql_password => "foo" }
+  end
 
 end
