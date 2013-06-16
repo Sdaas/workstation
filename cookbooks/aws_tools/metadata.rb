@@ -1,0 +1,7 @@
+name             'aws_tools'
+maintainer       'sdaas'
+maintainer_email 'daas.soumendra@gmail.com'
+license          'Apache 2.0'
+description      'Install and Configures all the AWS CLI tools'
+version          '0.0.0'
+recipe 'aws_tools', 'runs all of the recipes in this cookbook'
