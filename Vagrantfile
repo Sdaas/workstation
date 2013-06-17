@@ -30,6 +30,7 @@ Vagrant.configure("2") do |config|
      chef.data_bags_path = "data_bags"
      chef.add_role "java"
      chef.add_recipe "java"
+     chef.add_recipe "python"
      chef.add_recipe "aws_tools"
   
     # You may also specify custom JSON attributes:

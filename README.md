@@ -2,7 +2,7 @@
 Summary
 =======
 
-Installs all the AWS Command Line tools
+This projects creates an ubuntu vm containing all the AWS command-line tools. 
 
 Right now, it installs the following tools
 
@@ -16,13 +16,13 @@ Instructions to Use VM
 
 ( work in progress )
 
-* Install VirtualBox  [http://www.virtualbox.com]
-* Install Vagrant [http://www.vagrantup.com]
+* Install [VirtualBox](http://www.virtualbox.com)
+* Install [Vagrant](http://www.vagrantup.com)
 * Grab the VM
 
 		vagrant box add my-aws-workstation https://dl.dropboxusercontent.com/u/3469227/workstation-20130616.box
 
-* Check that it is on your machine
+* Confirm that it is on your machine
 
 		vagrant box list
 
@@ -33,13 +33,6 @@ Instructions to Use VM
 * Edit Vagrantfile - make sure that is it configured to used this vm 
 
       	config.vm.box = "my-aws-workstation"
-
-
-AWS Keys on Vagrant VM
-----------------------
-
-In this case, the AWS Keys are on the vagrant VM. Easy to start with, but this is not very secure.
-Anyone who can launch your VM can get access to your keys
 
 * Launch VM and ssh into it
 
@@ -55,18 +48,19 @@ Anyone who can launch your VM can get access to your keys
 		AWSSecretKey= ....
 
 * Uncomment all the lines from .bash_profile
-
 * Run ec2-describe-regions to see if everything works
 
 AWS Keys on local Machine
 --------------------------
 
-In this case, the AWSKeys are stored on the host machine, and the path is mounted when the VM launches
+In general, it is not a good idea to keep your AWS keys on the VM. A better way is to store them
+on the host machine, and mount the path containing the keys to the vm.
 
 * Edit Vagrantfile - mount the folder containing the awskeys
 
 		config.vm.synced_folder "/path/to/folder/with/keys", "/home/vagrant/awskeys"
 
+* Make sure that your .bash_profile is pointing to the right folder
 
 
 Cookbooks
@@ -75,5 +69,8 @@ Cookbooks
 The following cookbooks are used for this project
 
 * [Java](http://community.opscode.com/cookbooks/java)
-* [Windows](http://community.opscode.com/cookbooks/windows)
+* [Windows](http://community.opscode.com/cookbooks/windows) (required by java)
 * [Chef_Handler](http://community.opscode.com/cookbooks/chef_handler)
+* [Python](http://github.com/opscode-cookbooks/python)
+* [Build-Essential](http://community.opscode.com/cookbooks/build-essential) (required by python)
+* [Yum](http://github.com/opscode-cookbooks/yum) (required by python)
