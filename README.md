@@ -7,6 +7,7 @@ This projects creates an ubuntu vm containing all the AWS command-line tools.
 Right now, it installs the following tools
 
 * ec2-cli
+* s3cmd
 
 ( others are work in progress )
 
@@ -18,9 +19,10 @@ Instructions to Use VM
 
 * Install [VirtualBox](http://www.virtualbox.org)
 * Install [Vagrant](http://www.vagrantup.com)
+* Install a SSH client like [Putty](http://www.putty.org) or [Gnu on Windows](https://github.com/bmatzelle/gow/downloads)
 * Grab the VM
 
-		vagrant box add my-aws-workstation https://dl.dropboxusercontent.com/u/3469227/workstation-20130616.box
+		vagrant box add mybox http://bit.ly/19eS7dI
 
 * Confirm that it is on your machine
 
@@ -28,13 +30,13 @@ Instructions to Use VM
 
 * Prepare to launch 
        
-		vagrant init my-aws-workstation
+		vagrant init mybox
 
 * Edit Vagrantfile - make sure that is it configured to used this vm 
 
-      	config.vm.box = "my-aws-workstation"
+      	config.vm.box = "mybox"
 
-* Launch VM and ssh into it
+* Launch VM and ssh into it. 
 
 		vagrant up
 		vagrant ssh
@@ -62,9 +64,32 @@ on the host machine, and mount the path containing the keys to the vm.
 
 * Make sure that your .bash_profile is pointing to the right folder
 
+Previous VMs
+============
+
+* [v0.1](https://dl.dropboxusercontent.com/u/3469227/workstation-20130616.box) : First version. ec2-cli only
+
+
+To Create a New VM
+==================
+
+* Start from scratch and setup the VM
+
+	vagrant destroy
+	vagrant up
+
+* Test that the VM is working as designed and then shut it down
+
+	vagrant halt
+
+* Create a new Box
+
+
+Push this to dropbox and update the README.md file to point to the new location
+
 
 Cookbooks
-----------
+=========
 
 The following cookbooks are used for this project
 
