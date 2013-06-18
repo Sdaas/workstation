@@ -10,7 +10,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "lucid32"
   
   # Share your AWS Keys folder to the vagrant VM
-  #config.vm.synced_folder "./awskeys", "/home/vagrant/awskeys"
+  #config.vm.synced_folder "/path/to/awskeys", "/home/vagrant/awskeys"
+
 
 
   # Shell script to run at startup
@@ -31,10 +32,20 @@ Vagrant.configure("2") do |config|
      chef.add_role "java"
      chef.add_recipe "java"
      chef.add_recipe "python"
+     chef.add_recipe "s3cmd"
      chef.add_recipe "aws_tools"
   
     # You may also specify custom JSON attributes:
-     chef.json = { :mysql_password => "foo" }
+    chef.json = { 
+      "s3cmd" => {
+        "user" => "vagrant",
+        "encrypt" => false,
+        "secret_key" => "$AWSSecretKey",
+        "access_key" => "$AWSAccessKeyId",
+        "bucket_location" => "$AWS_REGION"
+      }
+    }
   end
 
 end
+

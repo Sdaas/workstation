@@ -16,7 +16,7 @@ Instructions to Use VM
 
 ( work in progress )
 
-* Install [VirtualBox](http://www.virtualbox.com)
+* Install [VirtualBox](http://www.virtualbox.org)
 * Install [Vagrant](http://www.vagrantup.com)
 * Grab the VM
 
@@ -74,3 +74,4 @@ The following cookbooks are used for this project
 * [Python](http://github.com/opscode-cookbooks/python)
 * [Build-Essential](http://community.opscode.com/cookbooks/build-essential) (required by python)
 * [Yum](http://github.com/opscode-cookbooks/yum) (required by python)
+* [Chef-S3CMD](http://community.opscode.com/cookbooks/s3cmd-master)
