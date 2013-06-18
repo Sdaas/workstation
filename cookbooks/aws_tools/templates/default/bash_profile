@@ -1,8 +1,10 @@
 
-# 
+echo "***"
+echo "*** HEY !! You neeed to uncommend some lines in ~/.bash_profile"
+echo "***"
+
 #
 # Uncomment these lines after setting up the "awskeys" directory
-#
 #
 #export AWS_REGION=us-west-1
 #export AWS_CREDENTIAL_FILE=~/awskeys/.awscredentials
