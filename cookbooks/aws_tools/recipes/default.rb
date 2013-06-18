@@ -46,9 +46,11 @@ template "/home/vagrant/.bash_profile" do
 end
 
 # Create the sample AWSkeys directory
-# And Create a new one ...
-execute "mkdir /home/vagrant/awskeys.sample" do
-	action :run
+directory "/home/vagrant/awskeys.sample" do
+  owner "vagrant"
+  group "vagrant"
+  mode 00644
+  action :create
 end
 
 # Create the vagrant user's ec2-cert file
@@ -87,8 +89,6 @@ file "/etc/profile.d/aws_tools.sh" do
   mode 0755
 end
 
-#export S3CMD_HOME=~/dev/awstools/s3cmd
-#export EC2_HOME=~/dev/awstools/ec2-api-tools
 #export AWS_ELB_HOME=~/dev/awstools/elb-cli
 #export BEANSTALK_HOME=~/dev/awstools/elasticbeanstalk-cli
 #export AWS_AUTO_SCALING_HOME=~/dev/awstools/as-api-tools
