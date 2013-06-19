@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "lucid32"
   
   # Share your AWS Keys folder to the vagrant VM
-  #config.vm.synced_folder "/path/to/awskeys", "/home/vagrant/awskeys"
+  # config.vm.synced_folder "/path/to/keys", "/home/vagrant/awskeys"
 
 
 
@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
   # The script.sh file needs to be present in relative to Vagrantfile on the _host_ machine
   config.vm.provision :shell, :path => "script.sh"
 
- # Enable provisioning with chef solo, specifying a cookbooks path, roles
+  # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
   #

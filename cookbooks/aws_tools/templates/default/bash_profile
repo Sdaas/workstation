@@ -1,6 +1,8 @@
 
 echo "***"
-echo "*** HEY !! You neeed to uncommend some lines in ~/.bash_profile"
+echo "***"
+echo "*** HEY !! You neeed to uncomment some lines in ~/.bash_profile"
+echo "***"
 echo "***"
 
 #
