@@ -15,6 +15,17 @@ template "#{node['aws_tools']['aws_tools_target']}/awssetup.sh" do
   group "root"
 end
 
+# All environment variables and path to the tools will
+# be written in this file
+file "/etc/profile.d/aws_tools.sh" do
+  mode 0755
+  owner "root"
+  group "root"
+  content "# Created by Chef. "
+  action :create_if_missing
+end
+
+
 # Create the vagrant user's bash_profile from the template
 template "/home/vagrant/.bash_profile" do
   source "bash_profile"
