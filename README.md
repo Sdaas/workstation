@@ -9,6 +9,7 @@ Right now, it installs the following tools
 * s3cmd
 * ec2-cli
 * autoscaling cli 
+* elastic load balancing cli
 * rds cli
 * cloudformation cli
 
