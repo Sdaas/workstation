@@ -6,8 +6,9 @@ This projects creates an ubuntu vm containing all the AWS command-line tools.
 
 Right now, it installs the following tools
 
-* ec2-cli
 * s3cmd
+* ec2-cli
+* autoscaling cli 
 
 ( others are work in progress )
 
