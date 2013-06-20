@@ -9,6 +9,8 @@ Right now, it installs the following tools
 * s3cmd
 * ec2-cli
 * autoscaling cli 
+* rds cli
+* cloudformation cli
 
 ( others are work in progress )
 
@@ -64,11 +66,6 @@ on the host machine, and mount the path containing the keys to the vm.
 		config.vm.synced_folder "/path/to/folder/with/keys", "/home/vagrant/awskeys"
 
 * Make sure that your .bash_profile is pointing to the right folder
-
-Previous VMs
-============
-
-* [v0.1](https://dl.dropboxusercontent.com/u/3469227/workstation-20130616.box) : First version. ec2-cli only
 
 
 To Create a New VM
