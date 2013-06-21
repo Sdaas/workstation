@@ -26,19 +26,11 @@ Instructions to Use VM
 * Install a SSH client like [Putty](http://www.putty.org) or [Gnu on Windows](https://github.com/bmatzelle/gow/downloads)
 * Grab the VM
 
-		vagrant box add mybox http://bit.ly/19eS7dI
-
-* Confirm that it is on your machine
-
-		vagrant box list
+		vagrant box add mybox http://http://bit.ly/17rpj4z
 
 * Prepare to launch 
        
 		vagrant init mybox
-
-* Edit Vagrantfile - make sure that is it configured to used this vm 
-
-      	config.vm.box = "mybox"
 
 * Launch VM and ssh into it. 
 
@@ -74,14 +66,16 @@ To Create a New VM
 
 * Start from scratch and setup the VM
 
-	vagrant destroy
-	vagrant up
+		vagrant destroy
+		vagrant up
 
 * Test that the VM is working as designed and then shut it down
 
-	vagrant halt
+		vagrant halt
 
 * Create a new Box
+
+		vagrant package --output whatever.box 
 
 
 Push this to dropbox and update the README.md file to point to the new location
