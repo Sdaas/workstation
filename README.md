@@ -26,7 +26,7 @@ Instructions to Use VM
 * Install a SSH client like [Putty](http://www.putty.org) or [Gnu on Windows](https://github.com/bmatzelle/gow/downloads)
 * Grab the VM
 
-		vagrant box add mybox http://http://bit.ly/17rpj4z
+		vagrant box add mybox http://bit.ly/17rpj4z
 
 * Prepare to launch 
        
