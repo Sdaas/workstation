@@ -1,5 +1,12 @@
 #!/usr/bin/env bash         
- 
+
+# Run these commands only if the vagrant_provision file is not present
+# This ensures that the script is run only the first time the VM is launched
+
+if [ -f "/var/vagrant_provision" ]; then
+  exit 0
+fi
+
 # login as root and run this script via bash & curl: 
 apt-get update
 apt-get install -y curl git-core
@@ -24,3 +31,6 @@ echo "* Installed Software Version Numbers"
 echo "*"
 ruby --version
 echo Gem `gem --version`
+
+touch /var/vagrant_provision
+
