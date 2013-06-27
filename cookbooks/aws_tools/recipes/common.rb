@@ -65,3 +65,12 @@ template "/home/vagrant/awskeys.sample/.awscredentials" do
   owner "vagrant"
   group "vagrant"
 end
+
+
+# Create the vagrant user's .awsaccount file
+template "/home/vagrant/awskeys.sample/.awscredentials" do
+  source "awsaccount"
+  mode 0644
+  owner "vagrant"
+  group "vagrant"
+end
