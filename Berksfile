@@ -2,7 +2,7 @@ site :opscode
 
 cookbook "git"
 cookbook "python"
-cookbook "s3cmd"
+cookbook "s3cmd-master"
 cookbook "java"
 
 #cookbook "aws_tools", path: "/Users/sdaas/dev/cookbooks/aws_tools"
