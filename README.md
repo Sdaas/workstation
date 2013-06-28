@@ -91,7 +91,10 @@ of all the installed cookbooks by running
 
 	berks shelf list
 
-* Make sure you have lucid 32 ( instructions please )
+* Get the vagrant base image for ubuntu and store it as lucid32
+
+	vagrant box add lucid32 http://files.vagrantup.com/lucid32.box
+	
 * Start from scratch and setup the VM
 
 		vagrant up
