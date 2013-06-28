@@ -1,0 +1,35 @@
+{
+  "sha": "339aae389443e0dc429e0d8a5a465befff5cd05c",
+  "sources": {
+    "git": {
+      "locked_version": "2.5.2"
+    },
+    "python": {
+      "locked_version": "1.3.4"
+    },
+    "s3cmd": {
+      "locked_version": "0.0.1"
+    },
+    "java": {
+      "locked_version": "1.11.6"
+    },
+    "dmg": {
+      "locked_version": "1.1.0"
+    },
+    "build-essential": {
+      "locked_version": "1.4.0"
+    },
+    "yum": {
+      "locked_version": "2.3.0"
+    },
+    "windows": {
+      "locked_version": "1.10.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "runit": {
+      "locked_version": "1.1.6"
+    }
+  }
+}

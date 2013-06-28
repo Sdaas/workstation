@@ -17,14 +17,15 @@ Right now, it installs the following tools
 * cloudwatch
 * aws-cli the mother of all aws cli
 * boto the father of all aws cli
-
 ( simpleDB will NOT be installed )
 
+Getting the VM
+==============
 
-Instructions to Use VM
-======================
+The Simple Way
+--------------
 
-( work in progress )
+You don't have to clone this repo. Just grab a ready-made VM by following the instructions below
 
 * Install [VirtualBox](http://www.virtualbox.org)
 * Install [Vagrant](http://www.vagrantup.com)
@@ -53,9 +54,6 @@ Instructions to Use VM
 * Uncomment all the lines from .bash_profile
 * Run ec2-describe-regions to see if everything works
 
-AWS Keys on local Machine
---------------------------
-
 In general, it is not a good idea to keep your AWS keys on the VM. A better way is to store them
 on the host machine, and mount the path containing the keys to the vm.
 
@@ -65,25 +63,46 @@ on the host machine, and mount the path containing the keys to the vm.
 
 * Make sure that your .bash_profile is pointing to the right folder
 
+The Hard Way
+-------------
 
-To Create a New VM
-==================
+These instructions show you how to use this repo to create your own VM from scratch. BTW, if you dont want to do this
+on a Windows box.
 
+* Install Ruby 1.9.3 or later on your machine. ( good idea to use rvm )
+* Install [berkshelf](http://berkshelf.com/)
+
+	gem install berkshelf
+	
+* Install [VirtualBox](http://www.virtualbox.org)
+* Install [Vagrant](http://www.vagrantup.com)
+* Install the omnibus and berkshelf plugins for Vagrant
+
+	vagrant plugin install vagrant-berkshelf
+	vagrant plugin install vagrant-omnibus
+
+* Clone this repo
+* Using this as the current directory, run
+
+	berks install
+
+* This will install all the cookbooks specified in the Berksfile to your ~/.berkshelf folder. Get a list
+of all the installed cookbooks by running
+
+	berks shelf list
+
+* Make sure you have lucid 32 ( instructions please )
 * Start from scratch and setup the VM
 
-		vagrant destroy
 		vagrant up
 
-* Test that the VM is working as designed and then shut it down
+* SSH into the VM
 
-		vagrant halt
+		vagrant sshvagrant halt
 
-* Create a new Box
+* You can now create a new box out of this VM if you like.
 
 		vagrant package --output whatever.box 
-
-
-Push this to dropbox and update the README.md file to point to the new location
 
 
 Cookbooks
