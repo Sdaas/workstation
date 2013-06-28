@@ -72,29 +72,29 @@ on a Windows box.
 * Install Ruby 1.9.3 or later on your machine. ( good idea to use rvm )
 * Install [berkshelf](http://berkshelf.com/)
 
-	gem install berkshelf
+		gem install berkshelf
 	
 * Install [VirtualBox](http://www.virtualbox.org)
 * Install [Vagrant](http://www.vagrantup.com)
 * Install the omnibus and berkshelf plugins for Vagrant
 
-	vagrant plugin install vagrant-berkshelf
-	vagrant plugin install vagrant-omnibus
+		vagrant plugin install vagrant-berkshelf
+		vagrant plugin install vagrant-omnibus
 
 * Clone this repo
 * Using this as the current directory, run
 
-	berks install
+		berks install
 
 * This will install all the cookbooks specified in the Berksfile to your ~/.berkshelf folder. Get a list
 of all the installed cookbooks by running
 
-	berks shelf list
+		berks shelf list
 
 * Get the vagrant base image for ubuntu and store it as lucid32
 
-	vagrant box add lucid32 http://files.vagrantup.com/lucid32.box
-	
+		vagrant box add lucid32 http://files.vagrantup.com/lucid32.box
+
 * Start from scratch and setup the VM
 
 		vagrant up
@@ -114,9 +114,6 @@ Cookbooks
 The following cookbooks are used for this project
 
 * [Java](http://community.opscode.com/cookbooks/java)
-* [Windows](http://community.opscode.com/cookbooks/windows) (required by java)
-* [Chef_Handler](http://community.opscode.com/cookbooks/chef_handler)
 * [Python](http://github.com/opscode-cookbooks/python)
-* [Build-Essential](http://community.opscode.com/cookbooks/build-essential) (required by python)
-* [Yum](http://github.com/opscode-cookbooks/yum) (required by python)
 * [Chef-S3CMD](http://community.opscode.com/cookbooks/s3cmd-master)
+* [AWStools](https://github.com/Sdaas/awstools)
