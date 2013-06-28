@@ -8,11 +8,21 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "lucid32"
+
+  config.vm.provider :virtualbox do |vb|
+
+    # Give a name to this VM
+    vb.name = "aws_workstation"
+
+    # Don't boot with headless mode
+    #vb.gui = true
+  
+    # Use VBoxManage to customize the VM. For example to change memory:
+    #vb.customize ["modifyvm", :id, "--memory", "1024"]
+  end
   
   # Share your AWS Keys folder to the vagrant VM
   # config.vm.synced_folder "/path/to/keys", "/home/vagrant/awskeys"
-  #config.vm.synced_folder "/Volumes/secrets/fsp-preprod", "/home/vagrant/awskeys"
-
 
   # Shell script to run at startup
   # See http://docs.vagrantup.com/v2/provisioning/shell.html
