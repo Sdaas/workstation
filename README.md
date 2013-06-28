@@ -14,6 +14,11 @@ Right now, it installs the following tools
 * cloudformation cli
 
 ( others are work in progress )
+* cloudwatch
+* aws-cli the mother of all aws cli
+* boto the father of all aws cli
+
+( simpleDB will NOT be installed )
 
 
 Instructions to Use VM
@@ -26,7 +31,7 @@ Instructions to Use VM
 * Install a SSH client like [Putty](http://www.putty.org) or [Gnu on Windows](https://github.com/bmatzelle/gow/downloads)
 * Grab the VM
 
-		vagrant box add mybox http://bit.ly/17rpj4z
+		vagrant box add mybox http://bit.ly/1aSCgTZ
 
 * Prepare to launch 
        
