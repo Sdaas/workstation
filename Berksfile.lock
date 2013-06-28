@@ -1,5 +1,5 @@
 {
-  "sha": "339aae389443e0dc429e0d8a5a465befff5cd05c",
+  "sha": "6e43f9356bc4b564e172ab56a684bf9f807f1e0f",
   "sources": {
     "git": {
       "locked_version": "2.5.2"
@@ -12,6 +12,11 @@
     },
     "java": {
       "locked_version": "1.11.6"
+    },
+    "aws_tools": {
+      "locked_version": "0.1.0",
+      "git": "https://github.com/Sdaas/awstools.git",
+      "ref": "76b7167593b580dd9060a07cfbbe5d6b3bce6286"
     },
     "dmg": {
       "locked_version": "1.1.0"
