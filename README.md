@@ -32,7 +32,7 @@ You don't have to clone this repo. Just grab a ready-made VM by following the in
 * Install a SSH client like [Putty](http://www.putty.org) or [Gnu on Windows](https://github.com/bmatzelle/gow/downloads)
 * Grab the VM
 
-		vagrant box add mybox http://bit.ly/1aSCgTZ
+		vagrant box add mybox http://bit.ly/19IuSwq
 
 * Prepare to launch 
        
